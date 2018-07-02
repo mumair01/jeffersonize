@@ -16,7 +16,7 @@ This increased detail in transcription, coupled with the ability for bi-directio
 ## Build Status
 
 The current version of Converter 2.0 has undergone Alpha Testing by members of the Tufts Human Interaction lab and is currently in the Beta Testing phase.
-If a user discovers problems with script functionality, feel free to provide feedback at: (email address)
+If a user discovers problems with script functionality, feel free to provide feedback at: hilab-dev@elist.tufts.edu
 
 ## Platform Support and Usage
 
@@ -99,7 +99,7 @@ As shown above, Converter 2.0 consists of:
 ## Contribute
 
 All users are welcome to contribute to the Converter 2.0 project by sending feedback regarding any new bugs or edge cases, as well as requests for additional functionality at:
-* (Email)
+* hilab-dev@elist.tufts.edu
 
 ## Collaborators and Acknowledgments
 
