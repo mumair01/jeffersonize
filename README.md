@@ -26,7 +26,7 @@ Converter 2.0 is fully compatible with:
 
 It acts as a simple command line tool that performs simple bi-directional conversions between CHAT and CAlite.
 
-To use Converter 2.0, please follow the following guidelines:
+To use Converter 2.0 on Mac, please follow the following guidelines:
 * Download Converter 2.0 from the Tufts Human Interaction Lab database.
 * Open Terminal.
 * Use terminal to move to the command line directory containing the downloaded files.
