@@ -105,15 +105,18 @@ All users are welcome to contribute to the Converter 2.0 project by sending feed
 
 The Converter 2.0 project is the product of the efforts of the following members of the Tufts Human Interaction Lab:
 
-**Professor Jan P. Deruiter:** 
-Department of Computer Science and Psychology, 
+**Muhammad Umair:**
+(Lead developer)
+BS Computer Science Candidate in Engineering,
 Tufts University
 
 **Dr. Saul Albert:**
 Postdoctoral Associate in Psychology,
 Tufts University
 
-**Muhammad Umair:**
-BS Computer Science Candidate in Engineering,
+**Professor Jan P. Deruiter:** 
+Department of Computer Science and Psychology, 
 Tufts University
+
+
 
