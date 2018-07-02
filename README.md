@@ -67,7 +67,7 @@ Converter 2.0 has certain intentional usage constraints, intended to provide a b
 * **NOTE:** Converter 2.0 does not guarantee a completely error free conversion. Instead, the project depends on the feedback from the Conversation Analytics community, along with all its users, to ensure a satisfactory conversion. We are fully committed to updating program preferences in the hopes of generating a completely error free version of Converter 2.0.
 
 **Formatting Constraints**
-* The Converter 2.0 project assumes that in its workflow design that future CA transcription standards, at least for the next few years, will be based on or up to par with ‘Transcribing for Social Research’ by Alexa Hepburn and Galina B. Bolden.
+* The Converter 2.0 project assumes in its workflow design that future CA transcription standards, at least for the next few years, will be based on or up to par with ‘Transcribing for Social Research’ by Alexa Hepburn and Galina B. Bolden.
 * For all CAlite files, the transcriber should follow the existing guidelines along with CAlite guidelines for additional features. (https://github.com/saulalbert/CABNC/wiki/CHAT-CA-lite)
 * For CHAT files, the transcriber should ensure that check reports no errors before using Converter 2.0.
 
