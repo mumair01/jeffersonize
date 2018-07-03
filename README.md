@@ -39,8 +39,8 @@ To use Converter 2.0 on Mac, please follow the following guidelines:
     * chat2calite
   * Specification of the complete file path for the file that is to be converted.
   * Example Commands:
-    * ./converter calite2chat /Users/Username/Documents/KB0RE000.S.ca
-    * ./converter chat2calite /Users/Username/Documents/KB0RE000.cha
+    * ./convert calite2chat /Users/Username/Documents/KB0RE000.S.ca
+    * ./convert chat2calite /Users/Username/Documents/KB0RE000.cha
 
 ## Usage Constraints
 
