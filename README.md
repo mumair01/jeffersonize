@@ -1,8 +1,7 @@
 # Jeffersonize: Bidirectional CHAT/CAlite Conversion Script
-Jeffersonize allows bi-directional conversion between Talk-bank’s CHAT and the Conversation Analysis (CA) format. It implements a set of solutions for integrating new [de-facto CA transcription standards](https://us.sagepub.com/en-us/nam/transcribing-for-social-research/book237847) into the [CLAN transcript editor](http://dali.talkbank.org/clan/).
+Jeffersonize allows bi-directional conversion between Talk-bank’s CHAT and the Conversation Analysis (CA) format. 
 
-The CAlite standard is currently documented at: https://github.com/saulalbert/CABNC/wiki/CHAT-CA-lite
-This new workflow for CA transcribers involves working on CA transcripts in CAlite in order to allow a conversion to CHAT, thereby presenting the opportunity for further conversions.
+Jeffersonize allows conversation analysis (CA) transcribers to convert transcripts between [CAlite](https://github.com/saulalbert/CABNC/wiki/CHAT-CA-lite) using the [CLAN transcript editor](http://dali.talkbank.org/clan/) and adhering to [de-facto CA transcription standards](https://us.sagepub.com/en-us/nam/transcribing-for-social-research/book237847) and computer readable [CHAT formatted](https://talkbank.org/manuals/CHAT.pdf) transcripts.
 
 ## Motivation
 The Converter 2.0 project draws its inspiration from Brian MacWhinney’s (Carnegie Mellon University) Talk-Bank project, which included the introduction of the CHAT format and conversion scripts from CA to CHAT. 
