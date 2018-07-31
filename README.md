@@ -1,5 +1,5 @@
-# Jeffersonize: a CHAT/CAlite converter
-Jeffersonize allows bi-directional conversion between Talk-bank’s CHAT and the Conversation Analysis (CA) format. 
+# jeffersonize: a CHAT/CAlite converter
+jeffersonize allows bi-directional conversion between Talk-bank’s CHAT and the Conversation Analysis (CA) format. 
 
 It enables conversation analysis (CA) transcribers to convert transcripts between [CAlite](https://github.com/saulalbert/CABNC/wiki/CHAT-CA-lite) using the [CLAN transcript editor](http://dali.talkbank.org/clan/) and adhering to [de-facto CA transcription standards](https://us.sagepub.com/en-us/nam/transcribing-for-social-research/book237847) and computer readable [CHAT formatted](https://talkbank.org/manuals/CHAT.pdf) transcripts.
 
@@ -19,7 +19,7 @@ The current version is an early alpha, feel free to provide feedback at: hilab-d
 
 ## Usage
 
-Jeffersonize is a command line tool that that does bi-directional conversions between CHAT and CAlite. If you convert from calite2chat, it will take a CA (.ca) file as input, and create a CHAT (.cha) file as output. If you go from chat2calite, it will do the opposite.
+jeffersonize is a command line tool that that does bi-directional conversions between CHAT and CAlite. If you convert from calite2chat, it will take a CA (.ca) file as input, and create a CHAT (.cha) file as output. If you go from chat2calite, it will do the opposite.
 
 * Use the 'mode' argument to specify which direction you're converting:
   * calite2chat
