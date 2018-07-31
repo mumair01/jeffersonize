@@ -3,14 +3,6 @@ Jeffersonize allows bi-directional conversion between Talk-bank’s CHAT and the
 
 Jeffersonize allows conversation analysis (CA) transcribers to convert transcripts between [CAlite](https://github.com/saulalbert/CABNC/wiki/CHAT-CA-lite) using the [CLAN transcript editor](http://dali.talkbank.org/clan/) and adhering to [de-facto CA transcription standards](https://us.sagepub.com/en-us/nam/transcribing-for-social-research/book237847) and computer readable [CHAT formatted](https://talkbank.org/manuals/CHAT.pdf) transcripts.
 
-## Motivation
-The Converter 2.0 project draws its inspiration from Brian MacWhinney’s (Carnegie Mellon University) Talk-Bank project, which included the introduction of the CHAT format and conversion scripts from CA to CHAT. 
-However, use of the existing CHAT format for everyday Conversation Analytics transcripts has revealed a lack of certain markers that are required for an accurate representation of conversation. This stems from the fact that CHAT is designed to be a completely unambiguous, machine-readable format, fully capable of being analyzed by existing tools or converted into structured formats such as XML.
-On the other hand, the CA format has traditionally been designed and used so as to provide a better visual representation of conversation being transcribed. It’s power in Conversation Analytics stems from the fact that the written version of the conversation being reviewed, perhaps through a visual media, is easy and natural to follow with the said visual media. The same functionality cannot be achieved using CHAT due to its extensive efforts to remain unambiguous, often times causing speech delimiters to become too complicated to follow for manual analysis.
-
-Therefore, there was a need to introduce a new version of CA, namely CAlite, that will introduce a slightly modified workflow to the original, such that it maintains the original power of visual representation, includes representation of a larger amount of speech delimiters, and requires minimal adjustments to CLAN’s existing format verification system: Check.
-
-This increased detail in transcription, coupled with the ability for bi-directional CAlite and CHAT conversion will allow CA transcribers to contribute to the CABNC Corpus (https://github.com/saulalbert/CABNC/wiki/CHAT-CA-lite) incrementally. In addition, pre-existing databases of CA files can be converted to more structured formats, allowing for automated analysis, and effectively removing the need for a slower manual analysis.
 
 ## Build Status
 
