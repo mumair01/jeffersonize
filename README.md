@@ -1,7 +1,7 @@
-# Jeffersonize: Bidirectional CHAT/CAlite Conversion Script
+# Jeffersonize: a CHAT/CAlite converter
 Jeffersonize allows bi-directional conversion between Talk-bank’s CHAT and the Conversation Analysis (CA) format. 
 
-Jeffersonize allows conversation analysis (CA) transcribers to convert transcripts between [CAlite](https://github.com/saulalbert/CABNC/wiki/CHAT-CA-lite) using the [CLAN transcript editor](http://dali.talkbank.org/clan/) and adhering to [de-facto CA transcription standards](https://us.sagepub.com/en-us/nam/transcribing-for-social-research/book237847) and computer readable [CHAT formatted](https://talkbank.org/manuals/CHAT.pdf) transcripts.
+It enables conversation analysis (CA) transcribers to convert transcripts between [CAlite](https://github.com/saulalbert/CABNC/wiki/CHAT-CA-lite) using the [CLAN transcript editor](http://dali.talkbank.org/clan/) and adhering to [de-facto CA transcription standards](https://us.sagepub.com/en-us/nam/transcribing-for-social-research/book237847) and computer readable [CHAT formatted](https://talkbank.org/manuals/CHAT.pdf) transcripts.
 
 
 ## Status
@@ -46,12 +46,12 @@ Jeffersonize is a command line tool that that does bi-directional conversions be
   
 ## Contribute
 
-All users are welcome to contribute to the Converter 2.0 project by sending feedback regarding any new bugs or edge cases, as well as requests for additional functionality at:
+Please send feedback, bugs & requests to:
 * hilab-dev@elist.tufts.edu
 
 ## Collaborators and Acknowledgments
 
-The Converter 2.0 project is the product of the efforts of the following members of the Tufts Human Interaction Lab:
+The [HiLab](https://sites.tufts.edu/hilab/people/), including
 
 * [Muhammad Umair](http://sites.tufts.edu/hilab/people (Lead developer)
 * [Saul Albert](http://twitter.com/saul)
