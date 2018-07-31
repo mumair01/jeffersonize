@@ -53,7 +53,7 @@ Please send feedback, bugs & requests to:
 
 The [HiLab](https://sites.tufts.edu/hilab/people/), including
 
-* [Muhammad Umair](http://sites.tufts.edu/hilab/people (Lead developer)
+* [Muhammad Umair](http://sites.tufts.edu/hilab/people) (Lead developer)
 * [Saul Albert](http://twitter.com/saul)
 * [Jan P. Deruiter](http://twitter.com/jpderuiter)
 
