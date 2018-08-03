@@ -1,4 +1,19 @@
 /*
+	UPDATES:
+	1. DATE: Tuesday, July 24th 2018
+		BY:	   Muhammad Umair
+			Removed rhe check extension feature because
+			it made the converter difficult to use.
+			**NOTE: This may expose the program to 
+					potential issues.
+
+	2. DATE: Thursday, August 2nd 2018
+		BY: Muhammad Umair
+			As part of changing the name of the program
+			to jeffersonize, changed any references of 
+			converter to jeffersonize.
+*/
+/*
 	Main Driver file for the 
 	bi-directional conveter.
 */
@@ -27,7 +42,7 @@ int main(int argc, char const *argv[])
 	if ( argc != 3 )
 	{
 		cerr << endl;
-		cerr << "Usage: ./convert [calite2chat OR chat2calite] [directory]\n";
+		cerr << "Usage: ./jeffersonize [calite2chat OR chat2calite] [directory]\n";
 	    cerr << endl;
 		return 0;
 	}
@@ -64,17 +79,17 @@ inline bool file_exists(const string &name)
 // Does: Runs the main ca-chat converter.
 void ca_chat( char const *argv[])
 {
-	char *path = create_char_point(argv);
+	//char *path = create_char_point(argv);
 	char *ext = new char[3];
 	ext[0] = '.', ext[1] = 'c',ext[2] = 'a';
-	if( check_extension(path,ext) == false )
-		return;
+	//if( check_extension(path,ext) == false )
+	//	return;
 	string in_file_name, out_file_name;
 	string out_path = generate_output_file_path(argv[2], "S.ca", "cha", in_file_name, out_file_name);
 	delete [] ext;
 	// Interface messages.
 	cout << endl;
-	cout << "CAlite2CHAT 2.0 performing analysis:\n";
+	cout << "jeffersonize performing analysis:\n";
 	cout << "From file: <" << in_file_name << ">\n";
 	cout << "Output file: <" << out_file_name << ">\n";
 	cout << endl;
@@ -87,17 +102,17 @@ void ca_chat( char const *argv[])
 // Does: Runs the main chat to ca converter
 void chat_ca( char const *argv[])
 {
-	char *path = create_char_point(argv);
+	//char *path = create_char_point(argv);
 	char *ext = new char[4];
 	ext[0] = '.', ext[1] = 'c' , ext[2] = 'h', ext[3] = 'a';
-	if (check_extension(path,ext) == false )
-		return;
+	//if (check_extension(path,ext) == false )
+	//	return;
 	string in_file_name, out_file_name;
 	string out_path = generate_output_file_path(argv[2], "cha", "S.ca", in_file_name, out_file_name);
 	delete [] ext;
 	// Interface messages.
 	cout << endl;
-	cout << "CHAT2CAlite 2.0 performing analysis:\n";
+	cout << "jeffersonize performing analysis:\n";
 	cout << "From file: <" << in_file_name << ">\n";
 	cout << "Output file: <" << out_file_name << ">\n";
 	cout << endl;

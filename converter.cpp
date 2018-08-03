@@ -1,3 +1,5 @@
+
+
 #include "converter.h"
 #include <iostream>
 #include <stdio.h>
@@ -11,6 +13,7 @@
 #include <unistd.h>
 using namespace std;
 
+const char *create_char_point(string);
 
 // Function file_exists
 // Params : string byRef
@@ -72,6 +75,7 @@ bool converter::read_file()
     }
 
     return true;
+
 }
 
 
@@ -129,11 +133,6 @@ void converter::run()
 		out_file(path_CA);
 	}
 }
-
-
-
-
-
 
 
 

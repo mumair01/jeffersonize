@@ -5,6 +5,21 @@
 */
 
 
+/*
+	Updates:
+	1. DATE: Monday, July 16th 2018
+		BY: Muhammad Umair
+		
+		Speaker ID asterisk
+		In line with user feedback, the 
+		program no longer removes the turn
+		initial asterisk before the speaker 
+		ID.
+		The remove speaker_ID function was removed.
+
+*/
+
+
 #include <iostream>
 #include <stdio.h>
 #include <fstream>
@@ -43,7 +58,6 @@ class chat_ca
 		void add(unsigned, wchar_t,vector<wchar_t> &, int);
 
 		// Modifier functions.
-		void remove_speaker_ID(vector<wchar_t> &);
 		void delim_pair(vector<wchar_t> &, vector<wchar_t> , vector<wchar_t>, vector<wchar_t>,
 		 vector<wchar_t>, unsigned, unsigned, int);
 		void loud(vector<wchar_t> &);
@@ -51,6 +65,7 @@ class chat_ca
 		void turn_initial_TCU(vector<wchar_t> &);
 		void latching(vector<wchar_t> &,wchar_t);
 		bool mid_TCU_question_check1(vector<wchar_t> , unsigned);
+		void rm_utterance_end(vector<wchar_t> &);
 };
 
 

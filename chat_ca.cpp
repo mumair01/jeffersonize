@@ -1,3 +1,33 @@
+/*
+	Updates:
+	1. DATE: Monday, July 16th 2018
+		BY: Muhammad Umair
+
+		Speaker ID asterisk
+		In line with user feedback, the 
+		program no longer removes the turn
+		initial asterisk before the speaker 
+		ID.
+		The remove speaker_ID function was removed.
+
+	2. DATE: Monday, July 23rd 2018
+		By: Muhammad Umair
+
+		Indent: Removed the custom indent in script 
+				in favor of CLAN's indent script.
+				Indent.exe is now a requirement
+	3. DATE: Thrsday, July 26th 2018
+		By: Muhammd Umair
+		Utterance end marker:
+		If there is a space+period combination at
+		the end of an utterane, the new function will
+		remove it.
+		The utterance end marker is removed if there 
+		is a latch symbol+period combination.
+
+*/
+
+
 #include "chat_ca.h"
 
 
@@ -121,7 +151,6 @@ void chat_ca::add(unsigned pos, wchar_t symbol , vector<wchar_t> &all_file,int i
 	19. Changing upper one eighth.
 	20. Changing the fast start symbols.
 	21. Changing the turn initial TCU's.
-	22. Removing the CHAT speaker ID Asterisk.
 */
 void chat_ca::run(vector<wchar_t> &all_file)
 {
@@ -130,7 +159,6 @@ void chat_ca::run(vector<wchar_t> &all_file)
 		cerr << "ERROR: File Empty\n";
 		return;
 	}
-
 
 	// Changing the mid TCU period symbol
 	std::vector<wchar_t> period_start = {letter_low_vertical};
@@ -183,12 +211,17 @@ void chat_ca::run(vector<wchar_t> &all_file)
 	std::vector<wchar_t> overlap_end_f2 = {right_floor};
 	std::vector<wchar_t> overlap_end3 = {greater_sign,left_square,greater_sign, right_square};
 	std::vector<wchar_t> overlap_end4 = {greater_sign,left_square,less_sign,right_square};
-	delim_pair(all_file,overlap_start,overlap_end3,overlap_start_f,overlap_end_f,0,0,0);
-	delim_pair(all_file,overlap_start,overlap_end4,overlap_start_f2,overlap_end_f2,0,0,0);
-	delim_pair(all_file,overlap_start,overlap_end,overlap_start_f,overlap_end_f,0,0,0);
-	delim_pair(all_file,overlap_start,overlap_end2,overlap_start_f2,overlap_end_f2,0,0,0);
+	delim_pair(all_file,overlap_start,overlap_end3,overlap_start_f,overlap_end_f,0,0,2);
+	delim_pair(all_file,overlap_start,overlap_end4,overlap_start_f2,overlap_end_f2,0,0,2);
+	delim_pair(all_file,overlap_start,overlap_end,overlap_start_f,overlap_end_f,0,0,2);
+	delim_pair(all_file,overlap_start,overlap_end2,overlap_start_f2,overlap_end_f2,0,0,2);
 
-	indent(all_file);
+	// **NOTE: Removing the custom indent function 
+	//			in favor of the talkbank script.
+	//indent(all_file);
+
+
+
 	// Changing the fast talk delimiters
 	std::vector<wchar_t> fast_talk = {white_up_triangle};
 	std::vector<wchar_t> fast_start_f = {greater_sign};
@@ -239,33 +272,11 @@ void chat_ca::run(vector<wchar_t> &all_file)
 	delim_pair(all_file,fast_start, un_end,fast_end_f,un_end,0,0,0);
 	// Changing the turn initia TCU
 	turn_initial_TCU(all_file);
-	// Removing speaker ID asterisk is present.
-	// **NOTE: The speaker ID asterisk should be
-	// removed at the end.
-	 remove_speaker_ID(all_file);
+
+	//**NOTE: Added to remove the CHAT utterance end marker
+	rm_utterance_end(all_file);
 	
 
-}
-
-
-
-// Function remove Speaker ID.
-// Params: File stream vector.
-/*
-	Traverses through the file stream.
-	Finds where the speaker ID is and 
-	removes the star.
-*/
-void chat_ca::remove_speaker_ID(vector<wchar_t> &all_file)
-{
-	// Checking if the delimiters need to be added.
-	for ( unsigned i = meta_end ; i < all_file.size() ; i++ )
-	{
-		if ( all_file[i] == newline && all_file[i+1] == star)
-		{
-			all_file.erase(all_file.begin()+i+1);
-		}
-	}
 }
 
 
@@ -320,6 +331,15 @@ void chat_ca::delim_pair(vector<wchar_t> &all_file, vector<wchar_t> start_delims
 		{
 			if ( all_file[i+1] == star)
 				found = false;
+		}
+		// For overlap markers case number 2
+		if ( check_case == 2 )
+		{	
+			if ( found == true  && all_file[i] == less_sign)
+			{
+				found = false;
+				i--;
+			}
 		}
 		if ( all_file[i] == end_delims[0] && found == true )
 		{
@@ -395,6 +415,9 @@ void chat_ca::loud(vector<wchar_t> &all_file)
 }
 
 
+
+
+
 // Function indent
 // Params: Vector file stream.
 /*
@@ -458,8 +481,6 @@ void chat_ca::indent(vector<wchar_t> &all_file)
 }
 
 
-
-
 // Function turn_initial_TCU
 // Params: vector file stream
 /*
@@ -515,7 +536,36 @@ bool chat_ca::mid_TCU_question_check1(vector<wchar_t> all_file, unsigned pos1)
 }
 
 
-
+// Function rm_utterance_end
+// Params: Vector file stream.
+// Does: Removes the end of utterance space + period
+//		combination from every utterance.
+void chat_ca::rm_utterance_end(vector<wchar_t> &all_file)
+{
+	for ( unsigned i = meta_end ; i < all_file.size() ; i++ )
+	{
+		bool check = false;
+		unsigned pos = 0, pos2 = 0;
+		if ((all_file[i-1] == space && all_file[i] == period) || (all_file[i-1] == latch_symbol && all_file[i] == period))
+		{
+			pos = i+1;
+			pos2 = i;
+			while (all_file[pos] != newline)
+			{
+				if ( all_file[pos] == 0x0015)
+				{
+					check = true;
+					break;
+				}
+				if ( all_file[pos] != space && all_file[pos] != tab)
+					break;
+				pos++;
+			} 
+		}
+		if (check == true)
+			all_file.erase(all_file.begin()+pos2);
+	}
+}
 
 
 
