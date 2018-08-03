@@ -25,8 +25,8 @@ jeffersonize is a command line tool that that does bi-directional conversions be
   * calite2chat
   * chat2calite
 * Examples:
-  * ./converter calite2chat /path/to/file/KB0RE000.S.ca
-  * ./converter chat2calite /path/to/file/KB0RE000.cha
+  * ./jefersonize calite2chat /path/to/file/KB0RE000.S.ca
+  * ./jefersonize chat2calite /path/to/file/KB0RE000.cha
 
 ## Usage Constraints
 
