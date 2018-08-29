@@ -8,7 +8,7 @@ It enables conversation analysis (CA) transcribers to convert transcripts betwee
 
 We've tested jeffersonize on
 * Mac OSX
-* Microsoft Windows OS
+* Windows
 
 The current version is an early alpha, feel free to provide feedback at: hilab-dev@elist.tufts.edu
 
