@@ -7,10 +7,10 @@ DEPS = converter.h ca_chat.h chat_ca.h
 %.o: %.cpp $(DEPS)
 		$(CC) -o $@ $< $(CFLAGS)
 
-all: converter clean
+all: jeffersonize clean
 
-converter: driver2.0.o converter.o ca_chat.o chat_ca.o
-		$(CC) -o converter driver2.0.o converter.o ca_chat.o chat_ca.o
+jeffersonize: driver2.0.o converter.o ca_chat.o chat_ca.o
+		$(CC) -o jeffersonize driver2.0.o converter.o ca_chat.o chat_ca.o
 
 clean:
 		rm -f *.o core *~ driver2.0.o converter.o ca_chat.o chat_ca.o
